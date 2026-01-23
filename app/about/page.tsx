@@ -8,7 +8,7 @@ export default function About() {
                 <h1 className="text-4xl font-bold mb-4 text-slate-900">Sahitya Chekka</h1>
                 <div className="flex flex-wrap items-center gap-4 text-slate-600 mb-6 text-sm">
                     <span className="flex items-center"><MapPin className="w-4 h-4 mr-1" /> Denton, Texas</span>
-                    <span className="flex items-center"><Phone className="w-4 h-4 mr-1" /> +1 512-947-5871</span>
+
                     <span className="flex items-center"><Mail className="w-4 h-4 mr-1" /> Chekkasahitya@gmail.com</span>
                 </div>
                 <p className="text-xl text-slate-600 leading-relaxed border-l-4 border-blue-600 pl-6">
