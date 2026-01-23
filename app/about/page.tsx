@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Briefcase, GraduationCap, Code, MapPin, Phone, Mail } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function About() {
     return (
@@ -9,7 +10,7 @@ export default function About() {
                 <div className="flex flex-wrap items-center gap-4 text-slate-600 mb-6 text-sm">
                     <span className="flex items-center"><MapPin className="w-4 h-4 mr-1" /> Denton, Texas</span>
 
-                    <span className="flex items-center"><Mail className="w-4 h-4 mr-1" /> Chekkasahitya@gmail.com</span>
+                    <a href="mailto:Chekkasahitya@gmail.com" className="flex items-center hover:text-blue-600 transition-colors"><Mail className="w-4 h-4 mr-1" /> Chekkasahitya@gmail.com</a>
                 </div>
                 <p className="text-xl text-slate-600 leading-relaxed border-l-4 border-blue-600 pl-6">
                     A data professional passionate about turning raw data into actionable business insights.
@@ -162,20 +163,8 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="mt-20 text-center bg-gradient-to-br from-slate-50 to-blue-50/50 p-10 rounded-2xl border border-blue-100">
-                <h2 className="text-2xl font-bold mb-4 text-slate-900">Let's Connect</h2>
-                <p className="text-slate-600 mb-8 max-w-xl mx-auto">
-                    I'm open to full-time opportunities in Business Analysis and Data Science.
-                    Feel free to reach out to discuss how I can contribute to your team.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                    <Link href="mailto:Chekkasahitya@gmail.com" className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20">
-                        Email Me
-                    </Link>
-                    <Link href="https://www.linkedin.com/in/sahitya-chekka/" target="_blank" className="bg-white border border-slate-200 text-slate-700 px-8 py-3 rounded-xl font-bold hover:bg-slate-50 transition-all hover:border-slate-300">
-                        LinkedIn Profile
-                    </Link>
-                </div>
+            <div className="mt-20">
+                <ContactForm />
             </div>
         </div>
     );
