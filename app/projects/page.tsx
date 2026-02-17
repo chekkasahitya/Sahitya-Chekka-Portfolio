@@ -35,21 +35,21 @@ export default function ProjectsPage() {
     return (
         <div className="container mx-auto px-4 py-12 max-w-6xl">
             <div className="mb-12 text-center">
-                <h1 className="text-4xl font-bold mb-4 text-slate-900">Portfolio Projects</h1>
-                <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                <h1 className="text-4xl font-bold mb-4 text-foreground">Portfolio Projects</h1>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                     Showcasing skills in SQL, Python, Tableau, and Machine Learning.
                 </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project) => (
-                    <div key={project.id} className="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                        <div className="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                    <div key={project.id} className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl dark:hover:shadow-none transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                        <div className="h-48 bg-muted relative overflow-hidden flex items-center justify-center">
                             {/* Placeholder for project image if not present */}
                             {project.image ? (
                                 <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                             ) : (
-                                <div className="text-slate-400 flex flex-col items-center">
+                                <div className="text-muted-foreground flex flex-col items-center">
                                     <FolderGit2 className="w-12 h-12 opacity-50 mb-2" />
                                     <span className="text-sm font-medium">Project Preview</span>
                                 </div>
@@ -57,37 +57,37 @@ export default function ProjectsPage() {
                         </div>
 
                         <div className="p-6 flex flex-col flex-grow">
-                            <h2 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">
+                            <h2 className="text-xl font-bold mb-3 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {project.title}
                             </h2>
-                            <p className="text-slate-600 mb-6 leading-relaxed text-sm flex-grow">
+                            <p className="text-muted-foreground mb-6 leading-relaxed text-sm flex-grow">
                                 {project.description}
                             </p>
 
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="px-2.5 py-1 bg-slate-50 text-slate-600 text-xs font-medium rounded-md border border-slate-100">
+                                    <span key={tag} className="px-2.5 py-1 bg-secondary text-muted-foreground text-xs font-medium rounded-md border border-border">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
-                            <div className="flex items-center gap-4 mt-auto pt-4 border-t border-slate-50">
+                            <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border">
                                 {project.galleryImages && project.galleryImages.length > 0 ? (
                                     <button
                                         onClick={() => openGallery(project)}
-                                        className="flex items-center text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+                                        className="flex items-center text-sm font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                     >
                                         <GalleryHorizontal className="w-4 h-4 mr-2" /> Explore
                                     </button>
                                 ) : project.githubUrl ? (
-                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors">
+                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                         <Github className="w-4 h-4 mr-2" /> Code
                                     </a>
                                 ) : null}
 
                                 {project.demoUrl && (
-                                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors">
+                                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                         <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
                                     </a>
                                 )}
