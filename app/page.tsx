@@ -12,11 +12,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col lg:block relative min-h-[auto] lg:min-h-[600px] mb-12 md:mb-20">
         {/* Background Image - Stacked on Mobile, Absolute on Desktop */}
-        <div className="relative w-full h-[400px] lg:absolute lg:inset-0 lg:h-full z-0">
+        <div className="relative w-full h-[50vh] min-h-[400px] lg:absolute lg:inset-0 lg:h-full z-0">
           <img
             src="/images/hero-graduation.jpg"
             alt="Sahitya Chekka"
-            className="w-full h-full object-cover object-top lg:object-left"
+            className="w-full h-full object-cover object-[80%_35%] lg:object-left"
           />
           <div className="absolute inset-0 bg-black/10 dark:bg-black/40 lg:hidden"></div>
         </div>

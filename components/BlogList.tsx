@@ -80,16 +80,16 @@ export function BlogList({ allPostsData }: { allPostsData: PostData[] }) {
                                 {summary}
                             </p>
 
-                            <div className="flex items-center justify-between pt-4 border-t border-border">
-                                <div className="flex items-center space-x-2">
+                            <div className="flex flex-col gap-4 pt-4 border-t border-border sm:flex-row sm:items-center sm:justify-between">
+                                <div className="flex flex-wrap items-center gap-2">
                                     <Tag className="w-3 h-3 text-muted-foreground" />
                                     {tags?.map((tag) => (
-                                        <span key={tag} className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded">
+                                        <span key={tag} className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded border border-border">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <Link href={`/blog/${id}`} className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 inline-flex items-center">
+                                <Link href={`/blog/${id}`} className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 inline-flex items-center shrink-0">
                                     Read Article <ArrowRight className="w-4 h-4 ml-1" />
                                 </Link>
                             </div>
