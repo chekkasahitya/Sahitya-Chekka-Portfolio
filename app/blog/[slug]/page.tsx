@@ -45,7 +45,7 @@ export default async function Post({ params }: Props) {
                 </div>
             </header>
 
-            <div className="prose prose-lg prose-blue max-w-none dark:prose-invert">
+            <div className="prose prose-lg prose-blue max-w-none">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {postData.content || ""}
                 </ReactMarkdown>
