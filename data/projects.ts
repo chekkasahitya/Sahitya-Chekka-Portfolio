@@ -53,7 +53,7 @@ export const projects: Project[] = [
         id: "recipe-genie",
         title: "Recipe Genie",
         description: "An AI-powered recipe generator that helps users find meals based on available ingredients. Features a responsive UI and intelligent search capabilities.",
-        tags: ["AI", "React", "Node.js", "API Integration"],
+        tags: ["AI", "React", "API Integration"],
         githubUrl: "https://github.com/chekkasahitya/Recipe-Genie",
         demoUrl: "https://recipe-genie-zqak.onrender.com/",
         image: "/images/dish_genie.png"
