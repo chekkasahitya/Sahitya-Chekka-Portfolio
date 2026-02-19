@@ -49,4 +49,13 @@ export const projects: Project[] = [
         demoUrl: "https://1drv.ms/x/c/8A435294D397A7DD/IQBj4fwzVkPSR45uz9jd_kYEATM1KpStTlMNWHFcKtH5aBg?e=cK3i0u",
         image: "/images/sales-profit-dashboard.png"
     },
+    {
+        id: "recipe-genie",
+        title: "Recipe Genie",
+        description: "An AI-powered recipe generator that helps users find meals based on available ingredients. Features a responsive UI and intelligent search capabilities.",
+        tags: ["AI", "React", "Node.js", "API Integration"],
+        githubUrl: "https://github.com/chekkasahitya/Recipe-Genie",
+        demoUrl: "https://recipe-genie-zqak.onrender.com/",
+        image: "/images/dish_genie.png"
+    },
 ];
