@@ -41,4 +41,12 @@ export const projects: Project[] = [
         demoUrl: "https://drive.google.com/file/d/1dq-pLWMwAqdeMr2LOl3rwHbQBMUkB1NG/view?pli=1",
         image: "/images/fake-news-detection.jpg"
     },
+    {
+        id: "sales-profit-dashboard",
+        title: "Sales & Profit Dashboard (Excel)",
+        description: "A comprehensive Excel dashboard analyzing sales performance and profitability. Features interactive data visualization for product lines, regional sales, and customer insights efficiently.",
+        tags: ["Excel", "Data Analysis", "Dashboard", "Business Intelligence"],
+        demoUrl: "https://1drv.ms/x/c/8A435294D397A7DD/IQBj4fwzVkPSR45uz9jd_kYEATM1KpStTlMNWHFcKtH5aBg?e=cK3i0u",
+        image: "/images/sales-profit-dashboard.png"
+    },
 ];
