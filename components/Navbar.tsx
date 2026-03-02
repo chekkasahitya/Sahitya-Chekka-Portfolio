@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, BarChart3 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
@@ -17,12 +17,30 @@ const navItems = [
 export function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [activeHash, setActiveHash] = useState("");
+
+    useEffect(() => {
+        setActiveHash(window.location.hash);
+        const handleHashChange = () => setActiveHash(window.location.hash);
+        window.addEventListener("hashchange", handleHashChange);
+        return () => window.removeEventListener("hashchange", handleHashChange);
+    }, []);
+
+    const isActive = (href: string) => {
+        if (href === "/") {
+            return pathname === "/" && (!activeHash || activeHash === "");
+        }
+        if (href.startsWith("/#")) {
+            return pathname === "/" && activeHash === href.substring(1);
+        }
+        return pathname === href;
+    };
 
     return (
         <nav className="bg-background py-8 mb-8 sticky top-0 z-50 border-b border-transparent dark:border-border transition-colors duration-300">
             <div className="container mx-auto px-4 flex flex-col items-center">
                 {/* Logo Section */}
-                <Link href="/" className="mb-8 group text-center">
+                <Link href="/" className="mb-8 group text-center" onClick={() => setActiveHash("")}>
                     <h1 className="text-3xl md:text-5xl font-serif tracking-tight text-foreground mb-2 font-light">
                         Sahitya Chekka
                     </h1>
@@ -40,7 +58,8 @@ export function Navbar() {
                             <a
                                 key={item.href}
                                 href={item.href}
-                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-muted-foreground`}
+                                onClick={() => setActiveHash(item.href.substring(1))}
+                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${isActive(item.href) ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1" : "text-muted-foreground"}`}
                             >
                                 {item.name}
                             </a>
@@ -48,7 +67,8 @@ export function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${pathname === item.href ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1" : "text-muted-foreground"
+                                onClick={() => { if (item.href === "/") setActiveHash(""); }}
+                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${isActive(item.href) ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1" : "text-muted-foreground"
                                     }`}
                             >
                                 {item.name}
@@ -82,8 +102,11 @@ export function Navbar() {
                                 <a
                                     key={item.href}
                                     href={item.href}
-                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-muted-foreground`}
-                                    onClick={() => setIsOpen(false)}
+                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 ${isActive(item.href) ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"}`}
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                        setActiveHash(item.href.substring(1));
+                                    }}
                                 >
                                     {item.name}
                                 </a>
@@ -91,9 +114,12 @@ export function Navbar() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 ${pathname === item.href ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"
+                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 ${isActive(item.href) ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"
                                         }`}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                        if (item.href === "/") setActiveHash("");
+                                    }}
                                 >
                                     {item.name}
                                 </Link>
