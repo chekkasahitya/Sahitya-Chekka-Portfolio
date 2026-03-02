@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
 import { ArrowRight, Code, Database, TrendingUp } from "lucide-react";
+import { SkillsMarquee } from "@/components/SkillsMarquee";
 
 export default function Home() {
   const allPostsData = getSortedPostsData();
@@ -46,6 +47,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Skills Marquee */}
+      <SkillsMarquee />
 
       {/* Features / Roles */}
       <section className="py-16 bg-muted/50 dark:bg-muted/10 transition-colors">
