@@ -33,17 +33,28 @@ export function Navbar() {
 
                 {/* Desktop Nav */}
                 <div className="hidden lg:flex items-center space-x-12">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${pathname === item.href ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1" : "text-muted-foreground"
-                                }`}
-                        >
-                            {/* ... */}
-                            {item.name}
-                        </Link>
-                    ))}
+                    {navItems.map((item) => {
+                        const isHashLink = item.href.startsWith("/#");
+
+                        return isHashLink ? (
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-muted-foreground`}
+                            >
+                                {item.name}
+                            </a>
+                        ) : (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={`text-xs font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${pathname === item.href ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1" : "text-muted-foreground"
+                                    }`}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
                     <div className="ml-4">
                         <ThemeToggle />
                     </div>
@@ -64,17 +75,30 @@ export function Navbar() {
             {isOpen && (
                 <div className="lg:hidden bg-background border-t border-border py-4 animate-in slide-in-from-top-2">
                     <div className="container mx-auto px-4 flex flex-col space-y-4 text-center items-center">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 ${pathname === item.href ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"
-                                    }`}
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {navItems.map((item) => {
+                            const isHashLink = item.href.startsWith("/#");
+
+                            return isHashLink ? (
+                                <a
+                                    key={item.href}
+                                    href={item.href}
+                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-muted-foreground`}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={`text-sm font-bold uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 ${pathname === item.href ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"
+                                        }`}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.name}
+                                </Link>
+                            )
+                        })}
                         <ThemeToggle />
                     </div>
                 </div>
