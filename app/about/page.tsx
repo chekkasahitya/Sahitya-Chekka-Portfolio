@@ -31,6 +31,20 @@ export default function About() {
                         <div className="space-y-10">
                             <div className="relative pl-6 border-l-2 border-border">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-500 border-2 border-background"></div>
+                                <h3 className="font-bold text-lg text-foreground">Turing Enterprises</h3>
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-blue-600 dark:text-blue-400 font-medium">Business Analyst (Remote)</span>
+                                    <span className="text-sm text-muted-foreground">Mar 2026 - Present</span>
+                                </div>
+                                <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
+                                    <li>Evaluated AI agent performance across client projects at Turing by reviewing <strong>SQL</strong> and <strong>Python</strong> outputs and applying structured rubrics to ensure accuracy and quality.</li>
+                                    <li>Tested AI agent-built web applications end-to-end, validating every feature and authoring detailed development reports documenting functional bugs, UI/UX gaps, and edge cases that informed model improvement.</li>
+                                    <li>Performed data validation and error analysis on AI-generated outputs.</li>
+                                </ul>
+                            </div>
+
+                            <div className="relative pl-6 border-l-2 border-border">
+                                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-muted border-2 border-background"></div>
                                 <h3 className="font-bold text-lg text-foreground">Deloitte Touche Tohmatsu</h3>
                                 <div className="flex justify-between items-center mb-2">
                                     <span className="text-blue-600 dark:text-blue-400 font-medium">Associate Analyst</span>
