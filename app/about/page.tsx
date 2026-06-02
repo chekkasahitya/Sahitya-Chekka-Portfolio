@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Briefcase, GraduationCap, Code, MapPin, Phone, Mail } from "lucide-react";
+import { Briefcase, GraduationCap, Code, MapPin, Phone, Mail, Linkedin } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function About() {
@@ -8,14 +8,16 @@ export default function About() {
             <div className="mb-12">
                 <h1 className="text-4xl font-bold mb-4 text-foreground">Sahitya Chekka</h1>
                 <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6 text-sm">
-                    <span className="flex items-center"><MapPin className="w-4 h-4 mr-1" /> Denton, Texas</span>
+                    <span className="flex items-center"><MapPin className="w-4 h-4 mr-1" /> Austin, TX (Open to Relocation)</span>
 
-                    <a href="mailto:Chekkasahitya@gmail.com" className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><Mail className="w-4 h-4 mr-1" /> Chekkasahitya@gmail.com</a>
+                    <a href="mailto:chekkasahitya04@gmail.com" className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><Mail className="w-4 h-4 mr-1" /> chekkasahitya04@gmail.com</a>
+                    
+                    <a href="tel:+15129475871" className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><Phone className="w-4 h-4 mr-1" /> +1 512-947-5871</a>
+                    
+                    <a href="https://www.linkedin.com/in/sahitya-chekka/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><Linkedin className="w-4 h-4 mr-1" /> LinkedIn</a>
                 </div>
-                <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-blue-600 pl-6">
-                    A data professional passionate about turning raw data into actionable business insights.
-                    With a strong foundation in statistics and computer science, I specialize in building end-to-end data pipelines,
-                    creating interactive dashboards, and driving business decisions through analytics.
+                <p className="text-base text-muted-foreground leading-relaxed border-l-4 border-blue-600 pl-6">
+                    Analytics and Business Intelligence Professional with 4+ years of experience in data analytics, business intelligence, and process improvement. Skilled in requirements gathering, stakeholder management, SQL, Python, Power BI, Tableau, and KPI development. Experienced in transforming complex data into actionable insights, optimizing business processes, and developing reporting solutions. Adept at supporting strategic decision making across finance, operations, AI evaluation, and sales domains.
                 </p>
             </div>
 
@@ -29,20 +31,24 @@ export default function About() {
                         </h2>
 
                         <div className="space-y-10">
+                            {/* Turing Enterprises */}
                             <div className="relative pl-6 border-l-2 border-border">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-500 border-2 border-background"></div>
                                 <h3 className="font-bold text-lg text-foreground">Turing Enterprises</h3>
                                 <div className="flex justify-between items-center mb-2">
-                                    <span className="text-blue-600 dark:text-blue-400 font-medium">Business Analyst (Remote)</span>
-                                    <span className="text-sm text-muted-foreground">Mar 2026 - Present</span>
+                                    <span className="text-blue-600 dark:text-blue-400 font-medium">AI Analyst</span>
+                                    <span className="text-sm text-muted-foreground">Mar 2026 – Present</span>
                                 </div>
                                 <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
-                                    <li>Evaluated AI agent performance across client projects at Turing by reviewing <strong>SQL</strong> and <strong>Python</strong> outputs and applying structured rubrics to ensure accuracy and quality.</li>
-                                    <li>Tested AI agent-built web applications end-to-end, validating every feature and authoring detailed development reports documenting functional bugs, UI/UX gaps, and edge cases that informed model improvement.</li>
-                                    <li>Performed data validation and error analysis on AI-generated outputs.</li>
+                                    <li>Defined and applied structured evaluation criteria to assess outputs against business requirements, data quality standards, and accuracy benchmarks across complex workflows.</li>
+                                    <li>Developed As-Is and To-Be process flows to streamline AI evaluation workflows and improve operational efficiency.</li>
+                                    <li>Leveraged SQL and Python to perform data extraction, transformation, and analysis on datasets exceeding 1M+ records.</li>
+                                    <li>Supported User Acceptance Testing (UAT) by validating requirements, test scenarios, and expected outcomes.</li>
+                                    <li>Defined acceptance criteria, user stories, and business requirements for AI-driven solutions and analytics initiatives.</li>
                                 </ul>
                             </div>
 
+                            {/* Deloitte Touche Tohmatsu */}
                             <div className="relative pl-6 border-l-2 border-border">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-muted border-2 border-background"></div>
                                 <h3 className="font-bold text-lg text-foreground">Deloitte Touche Tohmatsu</h3>
@@ -51,15 +57,15 @@ export default function About() {
                                     <span className="text-sm text-muted-foreground">Jun 2022 - Dec 2023</span>
                                 </div>
                                 <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
-                                    <li>Designed and maintained interactive sales performance dashboards using <strong>Tableau</strong> and <strong>Excel</strong>, enabling leadership to make real-time data-driven decisions.</li>
-                                    <li>Automated reporting pipelines with <strong>Excel macros</strong> and <strong>VBA</strong>, increasing reporting efficiency by <strong>32%</strong> and accuracy by <strong>14%</strong>.</li>
-                                    <li>Collaborated with cross-functional teams to define data KPIs, build business intelligence workflows, and integrate metrics into operational dashboards.</li>
-                                    <li>Executed <strong>SQL queries</strong> and data wrangling tasks to extract/transform data from <strong>SAP</strong> and <strong>ServiceNow</strong>.</li>
-                                    <li>Performed root cause and outlier analysis using statistical methods, delivering insights in stakeholder-ready formats.</li>
-                                    <li>Partnered with data engineers to validate ETL processes, ensuring data accuracy across reporting layers.</li>
+                                    <li>Applied statistical analysis and anomaly detection techniques to identify unusual payment transactions, expense outliers, and data inconsistencies across financial systems.</li>
+                                    <li>Streamlined financial and operational reporting through Excel VBA automation, reducing manual effort and improving reporting efficiency by 32%.</li>
+                                    <li>Validated ETL pipelines and financial data transformations, reducing reporting discrepancies by 25%.</li>
+                                    <li>Performed exploratory data analysis (EDA) on transaction and expense data to identify business risks, operational inefficiencies, and process improvement opportunities.</li>
+                                    <li>Collaborated with Finance, Procurement, and Operations stakeholders to document business requirements and support process enhancements for vendor payment and expense management workflows.</li>
                                 </ul>
                             </div>
 
+                            {/* RV Global Solutions */}
                             <div className="relative pl-6 border-l-2 border-border">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-muted border-2 border-background"></div>
                                 <h3 className="font-bold text-lg text-foreground">RV Global Solutions</h3>
@@ -68,40 +74,27 @@ export default function About() {
                                     <span className="text-sm text-muted-foreground">Feb 2021 – May 2022</span>
                                 </div>
                                 <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
-                                    <li>Developed predictive models and customer segmentation analyses using <strong>Power BI</strong> and Excel-based regression tools.</li>
-                                    <li>Created dynamic Power BI dashboards integrating SQL-sourced data, resulting in a <strong>20% lift</strong> in qualified leads.</li>
-                                    <li>Built and deployed data models to forecast product demand and inventory flow, improving supply chain accuracy.</li>
-                                    <li>Performed data cleaning and EDA using <strong>Excel Power Query</strong> and <strong>Python (Pandas, NumPy)</strong>.</li>
-                                    <li>Utilized DAX functions and advanced Power BI features (bookmarks, drillthrough) for intuitive user experiences.</li>
-                                    <li>Produced A/B test reports to recommend data-driven optimizations for campaigns.</li>
+                                    <li>Developed predictive models and performed customer segmentation analysis using Power BI, Excel, and statistical techniques to identify high-value prospects and optimize lead generation strategies.</li>
+                                    <li>Built interactive Power BI dashboards using SQL sourced data to visualize sales performance, lead funnels, customer cohorts, and conversion metrics, contributing to a 20% increase in qualified leads.</li>
+                                    <li>Designed and maintained data models to forecast demand, sales trends, and inventory requirements, improving planning accuracy and operational efficiency.</li>
+                                    <li>Extracted, cleaned, transformed, and analyzed large datasets using SQL, Excel Power Query, Python, and Power BI to support business intelligence initiatives and executive reporting.</li>
+                                    <li>Conducted campaign performance analysis and A/B testing to evaluate lead-generation effectiveness, providing recommendations that improved conversion and engagement rates.</li>
                                 </ul>
                             </div>
 
-                            <div className="relative pl-6 border-l-2 border-border">
-                                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-muted border-2 border-background"></div>
-                                <h3 className="font-bold text-lg text-foreground">I Cake You</h3>
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-blue-600 dark:text-blue-400 font-medium">Founder and Business Owner</span>
-                                    <span className="text-sm text-muted-foreground">Nov 2019 – Feb 2021</span>
-                                </div>
-                                <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
-                                    <li>Developed an internal sales dashboard using <strong>Excel</strong> and <strong>Google Data Studio</strong> to monitor KPIs.</li>
-                                    <li>Used <strong>Google Analytics</strong> data to refine ad targeting, increasing sales by <strong>30%</strong> within 6 months.</li>
-                                    <li>Built a simple <strong>SQLite-based CRM</strong> incorporating customer preferences for retention analysis.</li>
-                                    <li>Applied time-series analysis to understand seasonal demand fluctuations.</li>
-                                </ul>
-                            </div>
-
+                            {/* Metamorphosis Edu */}
                             <div className="relative pl-6 border-l-2 border-border">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-muted border-2 border-background"></div>
                                 <h3 className="font-bold text-lg text-foreground">Metamorphosis Edu</h3>
                                 <div className="flex justify-between items-center mb-2">
-                                    <span className="text-blue-600 dark:text-blue-400 font-medium">Management Intern</span>
-                                    <span className="text-sm text-muted-foreground">Jul 2019 – Oct 2019</span>
+                                    <span className="text-blue-600 dark:text-blue-400 font-medium">Management Analyst</span>
+                                    <span className="text-sm text-muted-foreground">Jul 2019 – Feb 2021</span>
                                 </div>
                                 <ul className="list-disc list-outside ml-4 mt-2 text-muted-foreground space-y-2 text-sm leading-relaxed">
-                                    <li>Collected and analyzed participant data using Excel and basic Python scripts.</li>
-                                    <li>Built interactive dashboards to track program engagement and mentor allocation.</li>
+                                    <li>Collected, cleaned, and analyzed participant, attendance, and survey data using Excel and Python to identify engagement trends and support data-driven program improvements.</li>
+                                    <li>Developed interactive dashboards and reports to monitor program participation, mentor allocation, attendance metrics, and performance indicators across multiple school locations.</li>
+                                    <li>Automated data consolidation and reporting processes using Excel functions and Python scripts, reducing manual effort and improving reporting accuracy.</li>
+                                    <li>Performed trend and gap analysis to identify areas for program enhancement, resource optimization, and mentor utilization.</li>
                                 </ul>
                             </div>
                         </div>
@@ -141,9 +134,9 @@ export default function About() {
 
                         <div className="space-y-6">
                             <div>
-                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Languages & Databases</h4>
+                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Languages/Database</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {["Python", "SQL", "PostgreSQL", "MySQL", "SQL Server", "R", "SPSS"].map(skill => (
+                                    {["Python", "SQL"].map(skill => (
                                         <span key={skill} className="bg-card border border-border px-2 py-1 rounded-md text-xs font-medium text-muted-foreground">
                                             {skill}
                                         </span>
@@ -152,9 +145,9 @@ export default function About() {
                             </div>
 
                             <div>
-                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Visualization & Tools</h4>
+                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Visualization & Reporting</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {["Tableau", "Power BI", "Excel", "Pandas", "NumPy", "Matplotlib", "Databricks", "Snowflake", "Hadoop"].map(skill => (
+                                    {["Tableau", "Power BI", "Excel", "Matplotlib", "Google Data Studio", "Streamlit"].map(skill => (
                                         <span key={skill} className="bg-card border border-border px-2 py-1 rounded-md text-xs font-medium text-muted-foreground">
                                             {skill}
                                         </span>
@@ -163,9 +156,31 @@ export default function About() {
                             </div>
 
                             <div>
-                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Business & Design</h4>
+                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Business Tools & Tech</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {["SAP", "ServiceNow", "JIRA", "Git", "Agile", "Scrum", "CRM"].map(skill => (
+                                    {["SAP", "QuickBooks", "ServiceNow", "Salesforce CRM workflows"].map(skill => (
+                                        <span key={skill} className="bg-card border border-border px-2 py-1 rounded-md text-xs font-medium text-muted-foreground">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Project & Management</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {["Asana", "JIRA", "Git", "Scrum", "Agile", "Microsoft Office", "SharePoint"].map(skill => (
+                                        <span key={skill} className="bg-card border border-border px-2 py-1 rounded-md text-xs font-medium text-muted-foreground">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Business Analysis</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {["Requirements Gathering", "BRD/FRD Creation", "User Stories", "UAT", "Gap Analysis", "Process Mapping", "Stakeholder Management", "KPI Definition", "As-Is/To-Be Analysis", "Workflow Documentation"].map(skill => (
                                         <span key={skill} className="bg-card border border-border px-2 py-1 rounded-md text-xs font-medium text-muted-foreground">
                                             {skill}
                                         </span>
