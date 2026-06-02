@@ -11,20 +11,6 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        id: "transformation-metrics-dashboard",
-        title: "Transformation Metrics Dashboard",
-        description: "Built a centralized reporting system in Power BI and Excel to track KPIs, milestones, and ROI, with automated data inputs and validations to ensure quality and deliver executive-ready insights on transformation progress.",
-        tags: ["PowerBI", "Excel", "SQL"],
-        image: "/images/sales-profit-dashboard.png"
-    },
-    {
-        id: "county-financials-system",
-        title: "County Financials System",
-        description: "Delivered an end to end financial management platform serving multiple counties, automating budgeting, grants management, and invoicing. Led the migration of financial data from legacy systems with full data integrity, consolidating disparate records into a single source of truth, and configured role based access controls to secure sensitive data and tailor module visibility by user and county. Built customized Power BI dashboards and a self-service report builder that gave stakeholders county-specific reporting on demand.",
-        tags: ["Python", "SQL", "Power BI"],
-        image: "/images/wisdom-index.jpg"
-    },
-    {
         id: "luma-wellness-companion",
         title: "LUMA",
         description: "Our hackathon prototype didn’t just get an upgrade — it evolved. We rebuilt LUMA into a gentle, intelligent emotional wellness companion designed for real everyday moments. Features Live Mood Detection, Mindful Chat (Text+Voice), and local privacy.",
