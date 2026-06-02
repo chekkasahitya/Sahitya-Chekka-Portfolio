@@ -25,15 +25,6 @@ export const projects: Project[] = [
         image: "/images/wisdom-index.jpg"
     },
     {
-        id: "fake-news-detection",
-        title: "Fake News Detection System",
-        description: "Developed a web-based machine learning app to classify news headlines for credibility in real-time. Implemented TF-IDF with Scikit-learn and fine-tuned DistilBERT for enhanced text classification. Deployed via Streamlit with an interactive user interface for instant feedback.",
-        tags: ["Machine Learning", "NLP", "Python", "Streamlit"],
-        githubUrl: "https://github.com/chekkasahitya/fake_news_detection",
-        demoUrl: "https://drive.google.com/file/d/1dq-pLWMwAqdeMr2LOl3rwHbQBMUkB1NG/view?pli=1",
-        image: "/images/fake-news-detection.jpg"
-    },
-    {
         id: "luma-wellness-companion",
         title: "LUMA",
         description: "Our hackathon prototype didn’t just get an upgrade — it evolved. We rebuilt LUMA into a gentle, intelligent emotional wellness companion designed for real everyday moments. Features Live Mood Detection, Mindful Chat (Text+Voice), and local privacy.",
@@ -47,12 +38,30 @@ export const projects: Project[] = [
         title: "WISDOM INDEX",
         description: "A comprehensive financial analytics solution designed to evaluate financial health, readiness, and long-term sustainability. Features a Financial Summary Dashboard, Readiness Overview, and Advisor Insights to convert complex data into actionable insights.",
         tags: ["Financial Analytics", "Dashboard Design", "Data Modeling"],
+        // githubUrl removed to prefer "Explore"
         image: "/images/wisdom-index.jpg",
         galleryImages: [
             "/images/wisdom-1.jpg",
             "/images/wisdom-2.jpg",
             "/images/wisdom-3.jpg"
         ]
+    },
+    {
+        id: "fake-news-detection",
+        title: "Fake News Detection System",
+        description: "Developed a machine learning-based system using advanced NLP techniques to classify news articles as real or fake. Features a Kaggle dataset, DistilRoBERTa model, and a user-friendly Flask/Streamlit web app.",
+        tags: ["NLP", "Machine Learning", "Python", "Transformers"],
+        githubUrl: "https://github.com/chekkasahitya/fake_news_detection",
+        demoUrl: "https://drive.google.com/file/d/1dq-pLWMwAqdeMr2LOl3rwHbQBMUkB1NG/view?pli=1",
+        image: "/images/fake-news-detection.jpg"
+    },
+    {
+        id: "sales-profit-dashboard",
+        title: "Sales & Profit Dashboard (Excel)",
+        description: "A comprehensive Excel dashboard analyzing sales performance and profitability. Features interactive data visualization for product lines, regional sales, and customer insights efficiently.",
+        tags: ["Excel", "Data Analysis", "Dashboard", "Business Intelligence"],
+        demoUrl: "https://1drv.ms/x/c/8A435294D397A7DD/IQBj4fwzVkPSR45uz9jd_kYEATM1KpStTlMNWHFcKtH5aBg?e=cK3i0u",
+        image: "/images/sales-profit-dashboard.png"
     },
     {
         id: "recipe-genie",
@@ -62,5 +71,5 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/chekkasahitya/Recipe-Genie",
         demoUrl: "https://recipe-genie-zqak.onrender.com/",
         image: "/images/dish_genie.png"
-    }
+    },
 ];
